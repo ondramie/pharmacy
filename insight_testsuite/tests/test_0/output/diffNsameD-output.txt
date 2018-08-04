@@ -1,0 +1,2 @@
+drug_name,num_prescriber,total_cost
+AMANTADINE,10,54390.31

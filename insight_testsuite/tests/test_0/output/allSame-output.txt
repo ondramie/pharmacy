@@ -1,0 +1,2 @@
+drug_name,num_prescriber,total_cost
+B,1,100

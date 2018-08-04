@@ -1,0 +1,4 @@
+drug_name,num_prescriber,total_cost
+CHLORPROMAZINE HCL,1,26826.62
+AMBIEN,1,22771.4
+AMBIEN CR,1,4792.29
