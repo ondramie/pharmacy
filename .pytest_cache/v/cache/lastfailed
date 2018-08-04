@@ -1,0 +1,7 @@
+{
+  "insight_testsuite/tests/test_input_data.py::TestGetDate": true, 
+  "insight_testsuite/tests/test_input_data.py::TestGetDate::()::test_correct": true, 
+  "insight_testsuite/tests/test_input_data.py::TestGetDate_two": true, 
+  "insight_testsuite/tests/test_input_data.py::TestGetDate_two::()::test_correct_two": true, 
+  "insight_testsuite/tests/test_input_data.py::testing": true
+}
