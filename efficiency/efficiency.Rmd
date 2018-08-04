@@ -6,9 +6,9 @@ output: html_notebook
 This is a plot of my algorithm performance for the challenge. 
 
 ```{r}
-file = "/Users/michalondras/pharmacy_counting/performance.txt"
+file = "/Users/michalondras/pharm_kount/efficiency/performance.txt"
 dat = read.table(file, header=FALSE, sep=",")
-plot(log2(dat$V1), log(dat$V2))
+plot(log2(dat$V1), log2(dat$V2))
 ```
 
 

@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+'''Main datastructure is Pharmacy that contains references to other objects'''
+
 from build_heap import HeapBuilder
 
 class DrugCost(): 

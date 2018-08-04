@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 
+'''Heap object used for building a heap and then sorting the heap to print results'''
+
 import math
 import time
 
 class HeapBuilder:
     def __init__(self):
-        self._swaps    = []
         self._data     = []
-        self._size     = 0
-        self._max_size = 0
+        self._size, self._max_size = 0, 0 
         self._print    = ''
     
     def parent(self, i):      return (i - 1)//2   
@@ -22,11 +22,6 @@ class HeapBuilder:
         tree_levels = math.ceil(math.log(self._size + 1, 2))
         self._max_size = 2**tree_levels - 1                       
         assert self._size == len(self._data)                
-
-    def write_response(self):
-        print(len(self._swaps))
-        for swap in self._swaps:
-            print(swap[0], swap[1])
     
     def shift_down(self, i):
         max_index = i
@@ -39,7 +34,6 @@ class HeapBuilder:
             max_index = r
     
         if i != max_index:
-            self._swaps.append((i, max_index))
             self._data[i], self._data[max_index] = self._data[max_index], self._data[i]
             self.shift_down(max_index)
 
@@ -59,7 +53,7 @@ class HeapBuilder:
         assert self.is_empty() == False
         for _ in range(self._size):
             v = self.extract_max()
-            value = str(round(v[0]) if float(v[0]).is_integer() else round(v[0], 2))
+            value = str(int(v[0]) if float(v[0]).is_integer() else round(v[0], 2))
             self._print += str(v[1]) + "," + str(v[2]) + "," + value + "\n"
         return self._print
 
