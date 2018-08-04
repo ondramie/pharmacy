@@ -2,13 +2,12 @@
 
 '''Heap object used for building a heap and then sorting the heap to print results'''
 
-import math
-import time
+import math  #ceil()
 
 class HeapBuilder:
     def __init__(self):
-        self._data     = []
         self._size, self._max_size = 0, 0 
+        self._data     = [] 
         self._print    = ''
     
     def parent(self, i):      return (i - 1)//2   

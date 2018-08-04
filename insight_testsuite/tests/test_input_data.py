@@ -5,9 +5,7 @@
 '''
 
 import pytest
-import sys
 import os
-
 
 from .src.alt_pharm import Pharmacy
 from .build_heap import HeapBuilder
