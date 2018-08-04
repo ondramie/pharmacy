@@ -1,14 +1,8 @@
 #!/usr/bin/env python
 
-'''Opens file and send inputs to datastructure. 
-
-'''
+'''Opens file and send inputs to datastructure.'''
 
 import sys                        #argv(), exit(); 
-import collections                #defaultdict(); 
-import cProfile                   #run()    
-import pstats                     #Stats(); 
-import math                       #inf; 
 from alt_pharm import Pharmacy    #pharmacy object
 
 def pharm_count():
@@ -30,7 +24,7 @@ def pharm_count():
         output.write(new_pharm.print_ouput())
     
 def main():
-    if sys.version_info[0] == 3 and len(sys.argv) > 1:
+    if sys.version_info[0] == 3 and len(sys.argv) == 3:
         try:
             pharm_count()
         except IOError:
@@ -39,6 +33,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-    #cProfile.run('main()', 'main.profile')
-    #stats = pstats.Stats('main.profile')
-    #stats.strip_dirs().sort_stats('time').print_stats()
